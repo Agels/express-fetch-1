@@ -3,7 +3,8 @@ import express from 'express';
 const app =  express();
 import fetch from 'node-fetch';
 
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 
 app.set('view engine','ejs');
 app.get('/', (req, res) => {
@@ -39,5 +40,5 @@ app.post('/products', async (req, res) => {
 
 
 
-app.listen(port, () => console.log(`running at : localhost:${port}`))
+app.listen(port, () => console.log(`running at : http://localhost:${port}`))
 
