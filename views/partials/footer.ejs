@@ -5,3 +5,39 @@
 </div>
 </body>
 </html>
+
+<script>
+    function copyProduct() {
+        navigator.clipboard.writeText("http://localhost:3000/api/product");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+    function copyProductWithId() {
+        navigator.clipboard.writeText("http://localhost:3000/api/product/{your id}");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+
+    function copyProductV2() {
+        navigator.clipboard.writeText("http://localhost:3000/api/product");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+    function copyProductWithIdV2() {
+        navigator.clipboard.writeText("http://localhost:3000/api/product/{your id}");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+  </script>
