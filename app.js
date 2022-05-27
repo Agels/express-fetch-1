@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const app =  express();
 // import fetch from 'node-fetch';
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 
 // app.use("/api",Productrouter);
 // app.use("/api/v2",ProductrouterV2);
+app.use(cors());
 app.use('/api/v3', ProductrouterV3);
 app.use('/api/v4', ProductrouterV4);
 // app.get('/users', (req, res) => {
