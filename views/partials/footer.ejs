@@ -1,6 +1,6 @@
 <div class="footer-padding  mt-5"></div>
 <div class="footer">
-    <p> ini footer ✌️</p>
+    <p> this is footer ✌️</p>
 </div>
 </div>
 </body>
@@ -25,7 +25,7 @@
 
 
     function copyProductV2() {
-        navigator.clipboard.writeText("http://localhost:3000/api/product");
+        navigator.clipboard.writeText("http://localhost:3000/api/v2/product");
         const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)
@@ -33,7 +33,39 @@
     }
 
     function copyProductWithIdV2() {
-        navigator.clipboard.writeText("http://localhost:3000/api/product/{your id}");
+        navigator.clipboard.writeText("http://localhost:3000/api/v2/product/{your id}");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+    function copyProductV3() {
+        navigator.clipboard.writeText("http://localhost:3000/api/v3/product");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+    function copyProductWithIdV3() {
+        navigator.clipboard.writeText("http://localhost:3000/api/v3/product/{your id}");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+    function copyProductV4() {
+        navigator.clipboard.writeText("http://localhost:3000/api/v4/product");
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    }
+
+    function copyProductWithIdV4() {
+        navigator.clipboard.writeText("http://localhost:3000/api/v4/product/{your id}");
         const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)

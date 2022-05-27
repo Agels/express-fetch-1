@@ -9,9 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 
 
 const port = process.env.PORT || 3000;
-const Productrouter = require("./app/product/routes");
-const ProductrouterV2 = require("./app/product-v2/routes");
-
+// const Productrouter = require("./app/product/routes");
+// const ProductrouterV2 = require("./app/product-v2/routes");
+require('./config/mongoose');
+const ProductrouterV3 = require('./app/product-v3/routes');
+const ProductrouterV4 = require('./app/product-v4/routes');
 app.use(express.static('public'));
 
 app.set('view engine','ejs');
@@ -19,8 +21,10 @@ app.get('/', (req, res) => {
     res.render('home')
 });
 
-app.use("/api",Productrouter);
-app.use("/api/v2",ProductrouterV2);
+// app.use("/api",Productrouter);
+// app.use("/api/v2",ProductrouterV2);
+app.use('/api/v3', ProductrouterV3);
+app.use('/api/v4', ProductrouterV4);
 // app.get('/users', (req, res) => {
 
 //     res.render('users')

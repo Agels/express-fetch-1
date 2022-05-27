@@ -9,8 +9,14 @@
   </div>
     <h4>#First</h4>
   <p>
-    i create two proccess for the manage data api, i use native mysql driver, and sequelize for the ORM and i will create option for noSQL using mongodb and mongoose for the Object Document Mapper (ODM)
+    i create two proccess for the manage data api, i use native mysql driver and sequelize for the ORM and i will create option for noSQL using mongodb and mongoose for the Object Document Mapper (ODM)
   </p>
+
+  #Reqruitment
+  you must installing several depedency
+  <div class="alert alert-secondary" role="alert">
+    npm i express mysql mysql2 sequelize mongodb mongoose
+  </div>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
       <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
@@ -36,7 +42,7 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapseOne"
-          aria-expanded="true"
+          aria-expanded="false"
           aria-controls="collapseOne"
         >
           Native Mysql
@@ -44,7 +50,7 @@
       </h2>
       <div
         id="collapseOne"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         aria-labelledby="headingOne"
         data-bs-parent="#accordionExample"
       >
@@ -346,16 +352,283 @@
           aria-labelledby="headingThree"
           data-bs-parent="#accordionExample"
         >
-          <div class="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is hidden
-            by default, until the collapse plugin adds the appropriate classes
-            that we use to style each element. These classes control the overall
-            appearance, as well as the showing and hiding via CSS transitions. You
-            can modify any of this with custom CSS or overriding our default
-            variables. It's also worth noting that just about any HTML can go
-            within the <code>.accordion-body</code>, though the transition does
-            limit overflow.
+        <div class="accordion-body">
+          <div class="div mt-4">
+            <div class="callout callout-info">
+              <div class="row">
+                <div class="col">
+                  <label for=""># GET ALL</label>
+                  <div class="">
+                    <strong>GET : </strong>
+                    api/v3/product
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductV3()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="callout callout-info">
+              <div class="row">
+                <div class="col">
+                  <label for=""># GET SINGLE</label>
+                  <div class="">
+                    <strong>GET : </strong>
+                    api/v3/product/{your id}
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductWithIdV3()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="callout callout-warning">
+              <div class="row">
+                <div class="col">
+                  <label for=""># POST METHOD</label>
+                  <div class="">
+                    <strong>POST : </strong>
+                    api/v3/product/
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductV3()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <div class="callout callout-danger">
+              <div class="row">
+                <div class="col">
+                  <label for=""># PUT METHOD</label>
+                  <div class="">
+                    <strong>PUT : </strong>
+                    api/v3/product/{your id}
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductWithIdV3()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="callout callout-danger">
+              <div class="row">
+                <div class="col">
+                  <label for=""># DELETE METHOD</label>
+                  <div class="">
+                    <strong>DELETE : </strong>
+                    api/v3/product/{your id}
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductWithIdV3()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseFour"
+            aria-expanded="false"
+            aria-controls="collapseFour"
+          >
+            Mongosee
+          </button>
+        </h2>
+        <div
+          id="collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingFour"
+          data-bs-parent="#accordionExample"
+        >
+        <div class="accordion-body">
+          <div class="div mt-4">
+            <div class="callout callout-info">
+              <div class="row">
+                <div class="col">
+                  <label for=""># GET ALL</label>
+                  <div class="">
+                    <strong>GET : </strong>
+                    api/v4/product
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductV4()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="callout callout-info">
+              <div class="row">
+                <div class="col">
+                  <label for=""># GET SINGLE</label>
+                  <div class="">
+                    <strong>GET : </strong>
+                    api/v4/product/{your id}
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductWithIdV4()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="callout callout-warning">
+              <div class="row">
+                <div class="col">
+                  <label for=""># POST METHOD</label>
+                  <div class="">
+                    <strong>POST : </strong>
+                    api/v4/product/
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductV4()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <div class="callout callout-danger">
+              <div class="row">
+                <div class="col">
+                  <label for=""># PUT METHOD</label>
+                  <div class="">
+                    <strong>PUT : </strong>
+                    api/v4/product/{your id}
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductWithIdV4()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="callout callout-danger">
+              <div class="row">
+                <div class="col">
+                  <label for=""># DELETE METHOD</label>
+                  <div class="">
+                    <strong>DELETE : </strong>
+                    api/v4/product/{your id}
+                  </div>
+                </div>
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn-clipboard"
+                    data-bs-container="body"
+                    data-bs-toggle="popover"
+                    data-bs-placement="top"
+                    data-bs-content="Copied"
+                    onclick="copyProductWithIdV4()"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
   </div>
